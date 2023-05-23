@@ -1,0 +1,74 @@
+#inicio-izq
+{
+    background-color: rgb(180, 180, 180);
+    width: 25%;
+    margin-left: 10%;
+    margin-top: 2%;
+    
+}
+
+#AXS
+{
+    color: black;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: monospace;
+    text-align: center;
+    font-weight: bold;
+    
+    
+}
+
+#add-btn
+{
+    color: black;
+    background-color:"#83D95B";
+    text-align: center;
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 35%;
+    margin-top: 15%;
+    width: 100%;
+    height: 20%;
+}
+
+
+
+#recuadro-der
+{
+    background-color: rgb(31, 31, 31);
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    height: fit-content;
+}
+
+#inicio
+{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+   
+    width:auto;
+    height: auto;
+
+}
+
+#blogList
+{
+    background-color: #ffffff;
+    font-family: monospace;
+    font-weight: bold;
+    margin-top: 5%;
+    font-size: 18px;
+    width: 230%;
+}
+
+#todos{
+    display: flex;
+    flex-direction: column-reverse;
+}
+

@@ -1,0 +1,39 @@
+.containerP{
+    background-color: rgb(53, 64, 33);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    height: auto;  
+}
+
+.Placeholder{
+    background-color: rgb(31, 31, 31);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5%;
+    width: 80%;
+    padding-left: 0%;
+    padding: 1%;
+}
+
+.Info{
+    background-color: #82d85a;
+    margin: 3%;
+    padding: 15px;
+    list-style: none;
+    font-family: monospace;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+
+    
+}
+
+#boton_borrar{
+    width: 30%;
+    margin-right: auto;
+    margin-left: auto;
+    color: darkolivegreen;
+    
+}

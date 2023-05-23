@@ -1,0 +1,23 @@
+.containerC{
+    background-color: rgb(53, 64, 33);
+    height: auto;
+    width: auto;  
+   display: flex;
+}
+
+#inicio-izq-btn
+{
+    background-color: rgb(31, 31, 31);
+    width: 25%;
+    margin-left: 10%;
+    margin-top: 2%;
+    
+}
+
+.cuadro-derecha
+{
+    background-color: rgb(31, 31, 31);
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 800px;
+}
