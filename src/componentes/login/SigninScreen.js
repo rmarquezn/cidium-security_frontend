@@ -56,7 +56,7 @@ export function SigninScreen() {
     } else {
       e.preventDefault();
       axios
-        .post("http://localhost:4000/signin", {
+        .post("cidium-securitybackend-production.up.railway.app/signin", {
           //cuando se vaya a prod hay que cambiar esta ruta para las funciones lambda?
           email: email,
           password: password,
