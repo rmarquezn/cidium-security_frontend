@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     BrowserRouter as Router,
     Routes,
@@ -7,10 +7,19 @@ import {
 import { LoginScreen } from '../login/LoginScreen';
 import { CidiumRouter } from './CidiumRouter';
 import { SigninScreen } from '../login/SigninScreen';
+import { UserContext } from '../context/UserContext';
 
 export const MainCidiumRouter = () => {
+    const [user, setUser] = useState({});
+
     return (
         <Router>
+        <UserContext.Provider value={
+            {
+                user,
+                setUser
+            }
+        }>
             <div>
                 <Routes>
                     <Route exact path="/login" element={<LoginScreen />} />
@@ -21,6 +30,8 @@ export const MainCidiumRouter = () => {
                      />
                 </Routes>
             </div>
+            </UserContext.Provider>
+
         </Router>
     )
 

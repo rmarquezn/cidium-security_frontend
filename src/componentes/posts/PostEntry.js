@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import axios from "axios";
+import { UserContext } from '../context/UserContext';
 
 export function PostEntry(props) {
+
+    const { user } = useContext(UserContext);
 
 
     const [postTitle, setPostTitle] = useState('')
@@ -58,7 +61,7 @@ export function PostEntry(props) {
 
         <div id="inicio-izq" className='form-group mx-4'>
 
-            <div className='font-weight-bold mt-4 mb-4 h1'>What can you share today?</div>
+            <div className='font-weight-bold mt-4 mb-4 h1'>{user.name}, what can you share today?</div>
 
             <label htmlFor='postTitle' className='font-weight-bold h5 mb-2'>Title:</label>
             <input

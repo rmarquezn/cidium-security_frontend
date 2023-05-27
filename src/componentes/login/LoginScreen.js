@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import image from '../../img/logo.png';
 import '../styles/Entry.css';
+import { UserContext } from '../context/UserContext';
 
 export const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -17,7 +19,14 @@ export const LoginScreen = () => {
   };
 
   const handleLogin = () => {
-    navigate('/');
+    if (password === 'admin') {
+      setUser({
+        name: email
+      });
+      navigate('/');
+    } else {
+      console.log('Invalid credentials');
+    }
   };
 
   return (
