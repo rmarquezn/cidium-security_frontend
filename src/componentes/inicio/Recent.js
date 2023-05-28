@@ -6,7 +6,7 @@ export const Recent = () => {
 
   useEffect(() => {
     axios
-      .get("cidium-securitybackend-production.up.railway.app/lastpost")
+      .get("https://cidium-securitybackend-production.up.railway.app/lastpost")
       .then((res) => {
         setListOfPosts((prev) => [res.data, ...prev]);
       })

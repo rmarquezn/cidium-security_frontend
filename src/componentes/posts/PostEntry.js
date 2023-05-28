@@ -25,11 +25,14 @@ export function PostEntry(props) {
   const newPost = (e) => {
     e.preventDefault();
     axios
-      .post("cidium-securitybackend-production.up.railway.app/newpost", {
-        userName: postAutor,
-        postTitle: postTitle,
-        postContent: postEntry,
-      })
+      .post(
+        "https://cidium-securitybackend-production.up.railway.app/newpost",
+        {
+          userName: postAutor,
+          postTitle: postTitle,
+          postContent: postEntry,
+        }
+      )
       .then((response) => {
         console.log("Revisando post entry..");
         console.log(` Response: ${response}`);

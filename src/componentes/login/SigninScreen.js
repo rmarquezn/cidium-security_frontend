@@ -56,14 +56,17 @@ export function SigninScreen() {
     } else {
       e.preventDefault();
       axios
-        .post("cidium-securitybackend-production.up.railway.app/signin", {
-          //cuando se vaya a prod hay que cambiar esta ruta para las funciones lambda?
-          email: email,
-          password: password,
-          userName: userName,
-          phone: phone,
-          occupation: occupation,
-        })
+        .post(
+          "https://cidium-securitybackend-production.up.railway.app/signin",
+          {
+            //cuando se vaya a prod hay que cambiar esta ruta para las funciones lambda?
+            email: email,
+            password: password,
+            userName: userName,
+            phone: phone,
+            occupation: occupation,
+          }
+        )
         .then((response) => {
           console.log(` Response: ${response}`);
           if (response.data.err) {

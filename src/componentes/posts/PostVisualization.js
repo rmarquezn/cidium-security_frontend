@@ -8,7 +8,7 @@ export function PostVisualization() {
 
   useEffect(() => {
     axios
-      .get("cidium-securitybackend-production.up.railway.app/posts")
+      .get("https://cidium-securitybackend-production.up.railway.app/posts")
       .then((res) => {
         console.log(res.data);
         setListOfPosts(res.data);
@@ -22,9 +22,12 @@ export function PostVisualization() {
     console.log(post._id);
 
     axios
-      .post("cidium-securitybackend-production.up.railway.app/deletepost", {
-        id: post._id,
-      })
+      .post(
+        "https://cidium-securitybackend-production.up.railway.app/deletepost",
+        {
+          id: post._id,
+        }
+      )
       .then((res) => {
         setListOfPosts((prev) =>
           prev.filter((prevPost) => prevPost._id !== post._id)
