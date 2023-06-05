@@ -10,6 +10,8 @@ export const Recent = () => {
         "https://2i4szfa3o3.execute-api.us-east-1.amazonaws.com/Prod/lastpost"
       )
       .then((res) => {
+        console.log(res.data);
+        console.log(res.data.items);
         setListOfPosts((prev) => [res.data.items, ...prev]);
       })
       .catch((err) => {
