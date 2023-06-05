@@ -19,18 +19,18 @@ export function PostVisualization() {
   }, []);
 
   const deletePost = (post) => {
-    console.log(post._id);
+    console.log(post.id);
 
     axios
       .post(
         "https://2i4szfa3o3.execute-api.us-east-1.amazonaws.com/Prod/deletepost",
         {
-          id: post._id,
+          id: post.id,
         }
       )
       .then((res) => {
         setListOfPosts((prev) =>
-          prev.filter((prevPost) => prevPost._id !== post._id)
+          prev.filter((prevPost) => prevPost.id !== post.id)
         );
       })
       .catch((err) => {
@@ -51,7 +51,7 @@ export function PostVisualization() {
               {listOfPosts.map((post) => (
                 <li
                   className="list-group-item d-flex justify-content-between align-items-center mb-3 text-justify"
-                  key={post._id}
+                  key={post.id}
                 >
                   <div className="mt-1">
                     <h5 className="card-title mb-3">{post.postTitle}</h5>
