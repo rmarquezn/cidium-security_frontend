@@ -10,7 +10,7 @@ export function PostVisualization() {
     axios
       .get("https://2i4szfa3o3.execute-api.us-east-1.amazonaws.com/Prod/posts")
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.items);
         setListOfPosts(res.data);
       })
       .catch((err) => {
