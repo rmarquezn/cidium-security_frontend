@@ -26,7 +26,7 @@ export function PostEntry(props) {
     e.preventDefault();
     axios
       .post(
-        "https://cidium-securitybackend-production.up.railway.app/newpost",
+        "https://2i4szfa3o3.execute-api.us-east-1.amazonaws.com/Prod/newpost",
         {
           userName: postAutor,
           postTitle: postTitle,
