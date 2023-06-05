@@ -57,7 +57,7 @@ export function SigninScreen() {
       e.preventDefault();
       axios
         .post(
-          "https://cidium-securitybackend-production.up.railway.app/users",
+          "https://2i4szfa3o3.execute-api.us-east-1.amazonaws.com/Prod/users",
           {
             //cuando se vaya a prod hay que cambiar esta ruta para las funciones lambda?
             email: email,
